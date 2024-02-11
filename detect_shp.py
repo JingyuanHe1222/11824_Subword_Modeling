@@ -109,10 +109,10 @@ for i in range(len(words)):
     words[i] = itr_transform(words[i])
     
 
-with open("pred_{split}_rule.dev.tgt", 'w') as f:
-    for word in words:
-        f.write(word)
-        f.write('\n')
+# with open("pred_{split}_rule.dev.tgt", 'w', encoding='utf-8') as f:
+#     for word in words:
+#         f.write(word)
+#         f.write('\n')
 
 
 truth = []

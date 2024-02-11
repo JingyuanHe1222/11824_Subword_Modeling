@@ -115,7 +115,7 @@ for i in range(len(words)):
     print(i, words[i])
     words[i] = transform(words[i])
     
-# with open("pred_tar.dev.tgt", 'w') as f:
+# with open("pred_tar.dev.tgt", 'w', encoding='utf-8') as f:
 #     for word in words:
 #         f.write(word)
 #         f.write('\n')
