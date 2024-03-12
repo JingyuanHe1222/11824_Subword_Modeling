@@ -13,8 +13,11 @@ with open(file_name, 'r', encoding="utf-8") as f:
     for line in tqdm(f):
         tok, tag = line.split('\t')
         output.append(inflect(tok, tag, language=lang))
+        # break
 
-with open('dataset/swc.txt', 'w', 'utf-8') as f:
+# print(output)
+output_name = f'dataset/{lang}.txt'
+with open(output_name, 'w', encoding='utf-8') as f:
     for o in output:
-        f.write(o + '\n')
+        f.write(o[0] + '\n')
       
