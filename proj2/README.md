@@ -9,6 +9,15 @@
 - I experimented with a trained Unimorph model, which had been trained on swc. The performance is high, possibly due to a considerable training data (while our dataset only has 2k lines for trianing) and I ended up using this towards the swc submission.  
 - For kbd, I cannot get a validation accuracy abobve 0.8, which is bad compared to the non-neural baseline. I tried improving on the non-neural baseline by observing the mistakes made in the validation set. However, the rules are not always helpful. There are three rules I made in process_kbd.py: 1. the first rule could do harm to the correct predictions as it does not always apply; 2. the second rule and the third rule could help improve the validation set performance, but does not apply to any words in the test set as the test set does not contain such specific forms.
 
+#### Structure
+- /neural_transducer and /bash_files: baseline and modified neural models
+- /unimorph_inflect and convert_inflect.py: unimorph model
+- /outputs: all the sample outputs
+- transfer*.py and make_set.py: utility files 
+- run.sh: shell script for running the inflection models of cross-lingual transfer at [inflection](https://github.com/antonisa/inflection.git)
+
+
+
 #### Collaboration 
 - I talked to Yuwei about high-level project ideas and he suggested me to try the Unimorph model. 
 - I talked to Zhicheng about the performance of our solutions with respect to the baseilne. 
